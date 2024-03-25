@@ -1,0 +1,138 @@
+@import "variables";
+
+.effect {
+  width: 100%;
+  padding: 25px;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+.effect-container {
+  width: 100%;
+  min-height: 93vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-form {
+  width: 340px;
+  min-height: 550px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 40px 20px 20px 20px;
+  padding-top: 25px;
+}
+
+.logo-login {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.input-login-item {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.6);
+  transition: $themeTime;
+
+}
+
+.login-title {
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  margin-top: 8px;
+  font-family: $dancingFont;
+}
+
+.forget-password-button {
+  width: 100%;
+  padding: 10px;
+  background: blue;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: $robotoFont;
+  margin-top: 27px;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.childrenWidth {
+  width: calc(100% - 300px);
+  position: relative;
+}
+
+.loading-page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-height: max-content;
+  max-width: max-content;
+  margin: auto;
+}
+
+.custom-file {
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  input {
+    width: 100%;
+    height: 48px;
+  }
+
+  .icon {
+    font-size: 22px;
+    transform: translateX(-5px);
+    cursor: pointer;
+  }
+}
+
+.custom-file:hover {
+  background-color: #e9ecef;
+}
+
+#file-upload {
+  display: none;
+}
+
+.container_modal{
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}

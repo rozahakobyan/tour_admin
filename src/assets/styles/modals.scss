@@ -1,0 +1,24 @@
+.add_tour_check {
+  background: none;
+
+  .check {
+    font-size: 280px;
+    color: #3FB366;
+    animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
+  }
+
+  .isActiveCheck {
+    animation: scale-out-center .5s cubic-bezier(.55, .085, .68, .53) both;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1
+  }
+}

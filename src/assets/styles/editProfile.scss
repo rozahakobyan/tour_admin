@@ -1,0 +1,154 @@
+@import "variables";
+
+.edit-profile {
+  .file_img {
+    display: flex;
+    justify-content: center;
+
+    .custom-file {
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+    }
+
+    #file-upload {
+      display: none;
+    }
+  }
+
+  .con_input {
+    padding: 55px 20px 35px 20px;
+
+    .row_item {
+      margin-bottom: 30px;
+
+      small {
+        margin-left: 7px;
+        color: red;
+        margin-top: 5px;
+      }
+
+      .input {
+        transition: $themeTime;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        span {
+          font-weight: 700;
+          font-size: 16px;
+          font-family: $dancingFont;
+          margin-bottom: 5px;
+          color: $dark;
+          transition: $themeTime;
+        }
+
+        input {
+          display: block;
+          width: 100%;
+          height: 30px;
+          border: none;
+          background: none;
+          color: black;
+          font-size: 14px;
+          padding-left: 3px;
+          outline: none;
+          font-family: $robotoFont;
+        }
+
+      }
+
+      .input::after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.56);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scale(0);
+        transition: $themeTime;
+      }
+
+      .input:hover::after {
+        transform: scale(1);
+      }
+
+      .input:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+
+        span {
+          color: $light;
+        }
+
+      }
+
+    }
+
+    button {
+      display: block;
+      padding: 12px 65px 12px 65px;
+      margin: 0 auto;
+      border-radius: 8px;
+      background: #013EAC;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: $themeTime;
+    }
+
+    button:hover {
+      background: #23a6d5;
+    }
+  }
+}
+
+.verification_email {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    width: 650px;
+    padding: 15px 25px 10px 25px;
+    background: black;
+    border-radius: 10px;
+    animation: slide-in-blurred-top .6s cubic-bezier(.23, 1.000, .32, 1.000) both;
+
+    p {
+      color: white;
+      font-size: 13px;
+      font-family: $robotoFont;
+    }
+
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 45px 12px 45px;
+      color: white;
+      font-weight: 500;
+      background: #23a6d5;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+}

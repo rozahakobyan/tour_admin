@@ -1,0 +1,323 @@
+@import "variables";
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: $light;
+  transition: $themeTime;
+  position: relative;
+}
+
+.activeTheme {
+  background: $dark;
+
+  .navbar-left {
+    background: $dark;
+    box-shadow: 0.5px 0 4px 0 #ffffff;
+
+    .nav-container {
+      box-shadow: -0.5px -0.5px 5px -1px #fff;
+
+      .nav-item {
+        .left-text-content {
+          .icon-item {
+            color: $light;
+          }
+
+          .item-title {
+            color: $light;
+          }
+        }
+
+        .open-sub-menu-icon {
+          color: $light;
+        }
+
+        .sub-menu {
+          .sub-menu-item {
+            .icon-item-sub {
+              color: $light;
+            }
+
+            .sub-menu-title {
+              color: $light;
+            }
+
+            .activeSubItem {
+              color: red;
+              border-color: red;
+            }
+          }
+        }
+      }
+
+      .active-nav-item:after {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+
+      .open-sub-menu {
+        .open-sub-menu-icon {
+          color: red;
+        }
+      }
+
+      .active-nav-item {
+        .left-text-content {
+          .item-title {
+            font-family: $dancingFont;
+            color: red;
+          }
+
+          .icon-item {
+            color: red;
+            transform: scale(1.2);
+          }
+
+        }
+      }
+
+      .nav-item:after {
+        background: linear-gradient(to right, transparent, transparent, $light);
+      }
+
+      .nav-item:hover {
+        .item-title {
+          font-family: $dancingFont;
+          color: red;
+        }
+
+        .icon-item {
+          color: red;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .nav-container::-webkit-scrollbar-thumb {
+      background: linear-gradient(transparent, transparent, blue);
+      height: 450px;
+      border-radius: 25px;
+    }
+  }
+
+  .header {
+    background: $dark;
+    box-shadow: 0 2px 5px -3px #fff;
+
+    .activeScroll {
+      background: $dark;
+      box-shadow: 0 2px 5px -3px #fff;
+    }
+
+    .isActiveScroll {
+      background: $dark;
+    }
+  }
+
+  .setting {
+    box-shadow: -1px 1px 5px -1px #fff;
+    background: $dark;
+
+    .them {
+      padding-top: 5px;
+
+      .item {
+        .them-icon {
+          background: rgba(255, 255, 255, 0.53);
+          color: $light;
+        }
+
+        p {
+          color: $light;
+        }
+      }
+
+      .edit-button {
+        background: $light;
+
+        span {
+          background: $dark;
+        }
+      }
+    }
+
+    .user-item {
+      border-bottom: 1px solid $light;
+
+      p {
+        color: $light;
+      }
+    }
+
+    .setting-container {
+      border-bottom: 1px solid $light;
+
+      li {
+        .item {
+          p {
+            color: $light;
+          }
+        }
+
+        .icon-right {
+          color: $light;
+        }
+
+        .icon-profile-modal {
+          background: $light;
+        }
+      }
+    }
+  }
+
+  .profile {
+    background: $dark;
+
+    .p_tit {
+      color: $light;
+    }
+
+    .p_cont {
+      .sing_cont {
+        .sing_it {
+          box-shadow: 0 0 3px 0 $light;
+
+          p {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+
+  .destination {
+    background: $dark;
+
+    .desc_cont {
+      form {
+        background: $dark;
+        box-shadow: $shadowLight;
+
+        small {
+          color: $light;
+        }
+      }
+    }
+  }
+
+  .result_destination {
+    .res_cont {
+      background: none;
+      box-shadow: $shadowLight;
+    }
+  }
+
+  .destination-about {
+    .cont_dec_about {
+      .item {
+        box-shadow: $shadowLight;
+
+        .about_text {
+          p {
+            color: $light;
+
+            span {
+              color: $light;
+              border-bottom: 1px solid $light;
+            }
+          }
+        }
+
+        button {
+          background: $light;
+        }
+      }
+    }
+  }
+
+  .categories {
+    .cont_cat {
+      .item {
+        background: $light;
+      }
+    }
+  }
+
+  .users {
+    .cont_cat {
+      .item {
+        background: $light;
+      }
+    }
+  }
+
+  .all-categories {
+    .cont_cat {
+      .item {
+        background: $light;
+      }
+    }
+  }
+
+  .tour_categories {
+    .tour_con {
+      form {
+        background: none;
+        box-shadow: $shadowLight;
+      }
+    }
+  }
+
+  .add_new_tour, .update_tour{
+    .cont_form{
+
+
+      .left_item{
+        .input_item{
+          input{
+            background: $light;
+          }
+        }
+      }
+
+      .right_item{
+        .schedule_calendar{
+          .schedule_list{
+            color: $light;
+            p{
+              color: $light;
+            }
+            svg{
+              fill: $light;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tour{
+    .cont_tour{
+      .item{
+        background: $light;
+      }
+    }
+  }
+
+  .details-tour{
+    .item{
+      .top_about{
+        .right_about{
+          span{
+            color: #fff;
+          }
+          p{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,316 @@
+@import "variables";
+
+.destination {
+  height: 100%;
+  background: $light;
+  transition: $themeTime;
+  position: relative;
+  padding: 45px;
+
+  h1 {
+    color: $dark;
+    font-family: $robotoFont;
+    transition: $themeTime;
+  }
+
+  .desc_cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+
+    form {
+      width: 856px;
+      padding: 20px 15px 20px 15px;
+      background: #D9D9D9;
+      border-radius: 5px;
+      position: relative;
+      transition: $themeTime;
+
+      .item-desc {
+        position: relative;
+        width: 400px;
+        height: 64px;
+
+        input {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          color: $dark;
+          font-family: $robotoFont;
+          transition: $themeTime;
+          padding-left: 3px;
+          font-size: 17px;
+        }
+
+        .remove-icon {
+          position: absolute;
+          right: 5px;
+          font-size: 20px;
+          color: red;
+          cursor: pointer;
+          top: 0;
+          bottom: 0;
+          max-height: max-content;
+          margin: auto;
+        }
+      }
+
+      .item_file {
+        padding-top: 25px;
+
+        .custom-file-upload {
+          width: 150px;
+          padding: 10px 20px;
+          cursor: pointer;
+          background-color: #f8f9fa;
+          color: #212529;
+          border: 1px solid #ced4da;
+          border-radius: 5px;
+          font-size: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .icon {
+            font-size: 22px;
+            transform: translateX(-5px);
+          }
+        }
+
+        .custom-file-upload:hover {
+          background-color: #e9ecef;
+        }
+
+        #file-upload {
+          display: none;
+        }
+      }
+
+      button {
+        width: 215px;
+        padding: 13px 0 13px 0;
+        border: none;
+        color: #E88716;
+        margin-top: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .img_url {
+        position: absolute;
+        width: 300px;
+        height: 220px;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        max-height: max-content;
+        margin: auto;
+        border-radius: 4px;
+        animation: swing-in-top-fwd .5s cubic-bezier(.175, .885, .32, 1.275) both;
+        cursor: pointer;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        span {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 25px;
+          height: 25px;
+          z-index: 999;
+
+          .delete-icon {
+            color: red;
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.zoom_file_img {
+
+  .img_cont {
+    width: 900px;
+    height: 550px;
+    position: relative;
+    animation: scale-up-center .4s cubic-bezier(.39, .575, .565, 1.000) both;
+
+    img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      object-fit: fill;
+    }
+
+    .delete-icon {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      color: red;
+      cursor: pointer;
+      font-size: 22px;
+    }
+  }
+
+  .isActiveZoomFile {
+    animation: scale-out-center .5s cubic-bezier(.55, .085, .68, .53) both;
+  }
+}
+
+.result_destination {
+
+  .res_cont {
+    width: 1000px;
+    height: 700px;
+    background: white;
+    position: relative;
+    animation: slide-in-blurred-top .6s cubic-bezier(.23, 1.000, .32, 1.000) both;
+    overflow: hidden;
+    padding: 10px 20px 0 20px;
+    border-radius: 5px;
+    transition: $themeTime;
+
+    .header_res {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 5px 25px 25px;
+      background: #D9D9D9;
+      border-radius: 5px;
+      position: relative;
+
+      .delete-icon {
+        font-size: 35px;
+        color: red;
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+      }
+
+      p {
+        color: $dark;
+        font-size: 16px;
+        font-weight: 400;
+
+        span {
+          font-size: 20px;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .images {
+      width: 100%;
+      height: 525px;
+      padding-top: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .bottom_btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+
+    button {
+      width: 180px;
+      padding: 15px 0 15px 0;
+      background: #23a6d5;
+      color: $light;
+      text-align: center;
+      border: none;
+      border-radius: 7px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }
+
+  .isActiveResCont {
+    animation: slide-out-blurred-top .45s cubic-bezier(.755, .05, .855, .06) both;
+  }
+}
+
+@keyframes scale-out-center {
+  0% {
+    transform: scale(1);
+    opacity: 1
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1
+  }
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(.1)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+@keyframes slide-in-blurred-top {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) scaleX(.2);
+    transform-origin: 50% 0;
+    filter: blur(40px);
+    opacity: 0
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1
+  }
+}
+
+@keyframes slide-out-blurred-top {
+  0% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 0;
+    filter: blur(0);
+    opacity: 1
+  }
+  100% {
+    transform: translateY(-1000px) scaleY(2) scaleX(.2);
+    transform-origin: 50% 0;
+    filter: blur(40px);
+    opacity: 0
+  }
+}

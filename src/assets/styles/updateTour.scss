@@ -1,0 +1,248 @@
+@import "variables";
+
+.update_tour {
+  form {
+    min-height: 90vh;
+
+    .cont_form {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px;
+
+      .left_item {
+        width: 50%;
+
+        .input_item {
+          width: 420px;
+          border-radius: 5px;
+          position: relative;
+          overflow: hidden;
+          transition: $themeTime;
+
+          input {
+            width: 100%;
+            height: 45px;
+            border: 1px solid hsl(0, 0%, 60%);
+            background: none;
+            color: $dark;
+            font-size: 16px;
+            outline: none;
+            padding-left: 10px;
+            border-radius: 5px;
+          }
+
+          input::placeholder {
+            font-size: 13px;
+          }
+        }
+
+        .featuredImage {
+          margin-top: 30px;
+          display: flex;
+          align-items: center;
+
+          .file_btn {
+            width: 180px;
+          }
+
+          figure {
+            width: 200px;
+            height: 100px;
+            margin-left: 37px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+          }
+        }
+
+        .destinations_select {
+          width: 420px;
+          height: 55px;
+          margin-top: 30px;
+        }
+      }
+
+      .right_item {
+        width: 50%;
+        padding-left: 35px;
+
+        .price_row {
+          width: 150px;
+          margin-top: 30px;
+
+          input {
+            width: 100%;
+            height: 45px;
+            border: 1px solid $dark;
+            border-radius: 5px;
+            color: black;
+            padding-left: 10px;
+            outline: none;
+            padding-right: 25px;
+          }
+        }
+
+        .schedule_calendar {
+          .row {
+            display: flex;
+
+            .btn {
+              height: 45px;
+              transform: translateX(5px);
+              padding-left: 15px;
+              padding-right: 15px;
+              border-radius: 5px;
+              border: none;
+              background: #23a6d5;
+              cursor: pointer;
+              color: $light;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .react-datepicker-wrapper {
+              width: 300px;
+
+              .react-datepicker__input-container {
+                input {
+                  width: 100%;
+                  height: 45px;
+                  border-radius: 5px;
+                  border: 0.5px solid $dark;
+                  padding-left: 10px;
+                  font-size: 16px;
+                  color: $dark;
+                  font-weight: $robotoFont;
+                }
+              }
+            }
+          }
+
+          .schedule_list {
+            padding: 5px 15px 5px 15px;
+            width: 250px;
+
+            li {
+              padding: 5px 0 5px 0;
+
+              div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+              .icon {
+                font-size: 20px;
+                color: $dark;
+                cursor: pointer;
+              }
+
+              p {
+                color: $dark;
+                font-family: $robotoFont;
+                font-size: 13px;
+
+              }
+            }
+          }
+        }
+
+
+        .add_gallery {
+          padding: 15px 0 15px 0;
+          margin-top: 20px;
+
+          .file_gallery {
+            width: 156px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #23a6d5;
+            border-radius: 10px;
+
+            #files_gallery {
+              display: none;
+            }
+          }
+
+          .gallery_list {
+            width: 100%;
+            padding: 18px 0 18px 0;
+            overflow-x: scroll;
+            display: flex;
+
+            li {
+              list-style: none;
+              margin-right: 10px;
+
+              figure {
+                width: 120px;
+                height: 120px;
+                border-radius: 7px;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+
+                .delete {
+                  width: 25px;
+                  height: 25px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  color: $light;
+                  background: rgba(0, 0, 0, 0.45);
+                  cursor: pointer;
+                  font-size: 20px;
+                  border-radius: 5px 0 0 5px;
+                }
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    button {
+      display: block;
+      margin: 28px auto;
+      padding: 12px 120px 12px 120px;
+      color: #E88716;
+      border-radius: 7px;
+      border: none;
+      font-weight: 900;
+      font-size: 17px;
+      cursor: pointer;
+      background: #D9D9D9;
+    }
+  }
+}
+.desc_text {
+  padding-top: 20px;
+
+  textarea {
+    border-radius: 10px;
+    width: 90%;
+    height: 145px;
+    resize: none;
+    padding: 10px;
+    outline: none;
+    color: $dark;
+    font-family: $robotoFont;
+    font-size: 16px;
+  }
+}
