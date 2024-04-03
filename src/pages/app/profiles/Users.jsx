@@ -31,22 +31,23 @@ const Users = () => {
                         : list.map(item => <AboutItem key={item.id} item={item}/>)
                 }
                 <div className={"pages-list"}>
-                    <ReactPaginate
-                        activeClassName={'item active '}
-                        breakClassName={'item break-me '}
-                        breakLabel={'...'}
-                        containerClassName={'pagination'}
-                        disabledClassName={'disabled-page'}
-                        marginPagesDisplayed={2}
-                        nextClassName={"item next "}
-                        nextLabel={">"}
-                        initialPage={page - 1}
-                        onPageChange={(ev) => navigate(`/users/${ev.selected + 1}`)}
-                        pageCount={pages}
-                        pageClassName={'item pagination-page '}
-                        pageRangeDisplayed={2}
-                        previousClassName={"item previous"}
-                        previousLabel={"<"} />
+                    {list.pages && list.pages > 1 ?
+                        <ReactPaginate
+                            activeClassName={'item active '}
+                            breakClassName={'item break-me '}
+                            breakLabel={'...'}
+                            containerClassName={'pagination'}
+                            disabledClassName={'disabled-page'}
+                            marginPagesDisplayed={2}
+                            nextClassName={"item next "}
+                            nextLabel={">"}
+                            initialPage={page - 1}
+                            onPageChange={(ev) => navigate(`/users/${ev.selected + 1}`)}
+                            pageCount={pages}
+                            pageClassName={'item pagination-page '}
+                            pageRangeDisplayed={2}
+                            previousClassName={"item previous"}
+                            previousLabel={"<"} /> : null}
                 </div>
             </div>
 

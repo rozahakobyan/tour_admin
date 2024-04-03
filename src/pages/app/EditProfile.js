@@ -7,18 +7,20 @@ import {userUpdateProfileRequest} from "../../store/action/users";
 import {SyncLoader} from "react-spinners";
 
 const EditProfile = () => {
-    const [profile, setProfile] = useState(useSelector(state => state.users.profile));
+    const [profile, setProfile] = useState({});
     const errors = useSelector(state => state.users.errors);
     const loading = useSelector(state => state.users.loading);
-
+    const user = useSelector(state => state.users.profile)
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        setProfile(...user)
+    }, [user]);
 
     const handleChangeFile = useCallback((e) => {
         setProfile({...profile, photo: e.target.files[0]})
     }, [profile]);
-
 
     const handleChange = useCallback((key) => (event) => {
         const {value} = event.target;
@@ -53,7 +55,7 @@ const EditProfile = () => {
                                 profile.photo?.name
                                     ? URL.createObjectURL(profile.photo)
                                     : `${API_URL}/${profile.photo}`
-                            }/>
+                            } alt={""}/>
                         </label>
                         <input
                             onChange={handleChangeFile}

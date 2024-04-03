@@ -80,43 +80,43 @@ const navItem = [
             },
         ]
     },
-    {
-        id: 4,
-        name: 'Services',
-        path: 'services',
-        Icon: MdMedicalServices,
-        openIcon: true,
-        renderItem: true,
-        subMenu: [
-            {
-                id: 44,
-                title: "Message",
-                Icon: AiOutlineMessage,
-                path: "message",
-            },
-        ]
-    },
-    {
-        id: 5,
-        name: 'Hotels',
-        Icon: MdLocalHotel,
-        path: "hotels",
-        renderItem: true,
-    },
-    {
-        id: 6,
-        name: 'Food',
-        Icon: IoFastFoodSharp,
-        path: "food",
-        renderItem: true,
-    },
-    {
-        id: 7,
-        name: 'Cars',
-        Icon: FaCarSide,
-        path: "/cars",
-        renderItem: true,
-    },
+    // {
+    //     id: 4,
+    //     name: 'Services',
+    //     path: 'services',
+    //     Icon: MdMedicalServices,
+    //     openIcon: true,
+    //     renderItem: true,
+    //     subMenu: [
+    //         {
+    //             id: 44,
+    //             title: "Message",
+    //             Icon: AiOutlineMessage,
+    //             path: "message",
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 5,
+    //     name: 'Hotels',
+    //     Icon: MdLocalHotel,
+    //     path: "hotels",
+    //     renderItem: true,
+    // },
+    // {
+    //     id: 6,
+    //     name: 'Food',
+    //     Icon: IoFastFoodSharp,
+    //     path: "food",
+    //     renderItem: true,
+    // },
+    // {
+    //     id: 7,
+    //     name: 'Cars',
+    //     Icon: FaCarSide,
+    //     path: "/cars",
+    //     renderItem: true,
+    // },
     {
         id: 8,
         name: 'Users',

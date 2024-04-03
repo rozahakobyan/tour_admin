@@ -11,9 +11,9 @@ const AboutItem = ({item}) => {
 
     const { page } = useParams();
 
-    const handleUpdate = useCallback((item) => () => {
-        // setUpdateItem(item)
-    }, []);
+    // const handleUpdate = useCallback((item) => () => {
+    //     // setUpdateItem(item)
+    // }, []);
 
     const handleDeleteGetId = useCallback( (id) => () => {
         dispatch(usersDeleteRequest({id, page}))
@@ -29,11 +29,11 @@ const AboutItem = ({item}) => {
                 <p>Users role: <span>{item.role}</span></p>
             </figcaption>
             <ul className="icon_row">
-                <li
-                    onClick={handleUpdate(item)}
-                    className={'icon'}>
-                    <BiEdit/>
-                </li>
+                {/*<li*/}
+                {/*    onClick={handleUpdate(item)}*/}
+                {/*    className={'icon'}>*/}
+                {/*    <BiEdit/>*/}
+                {/*</li>*/}
                 <li
                     onClick={handleDeleteGetId(item.id)}
                     className={'icon'}>

@@ -40,11 +40,11 @@ const ProfileNavigate = () => {
                 <Route path={'/tour/add-new-tour'} element={<AddNewTour/>}/>
                 <Route path={'/tour-details/:id'} element={<DetailsTour/>}/>
                 <Route path={'/tour-update/:id'} element={<UpdateTour/>}/>
-                <Route path={'/services'} element={<Services/>}/>
-                <Route path={'/services/message'} element={<Message/>}/>
-                <Route path={'/hotels'} element={<Hotels/>}/>
-                <Route path={'/food'} element={<Food/>}/>
-                <Route path={'/cars'} element={<Cars/>}/>
+                {/*<Route path={'/services'} element={<Services/>}/>*/}
+                {/*<Route path={'/services/message'} element={<Message/>}/>*/}
+                {/*<Route path={'/hotels'} element={<Hotels/>}/>*/}
+                {/*<Route path={'/food'} element={<Food/>}/>*/}
+                {/*<Route path={'/cars'} element={<Cars/>}/>*/}
                 <Route path={'/users/:page'} element={<Users/>}/>
                 <Route path={'/settings'} element={<Settings/>}/>
                 <Route path={'/help'} element={<Help/>}/>

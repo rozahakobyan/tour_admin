@@ -22,6 +22,25 @@
   overflow: hidden;
 }
 
+.edit-pass {
+  width: 100%;
+  overflow: hidden;
+}
+
+.edit-pass-container {
+  width: 100%;
+  min-height: 93vh;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .account-edit-password{
+    background: darkgrey;
+  }
+}
+
 .login-form {
   width: 340px;
   min-height: 550px;
