@@ -15,7 +15,7 @@ const EditProfile = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        setProfile(...user)
+        setProfile(user)
     }, [user]);
 
     const handleChangeFile = useCallback((e) => {
