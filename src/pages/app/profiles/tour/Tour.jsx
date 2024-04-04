@@ -17,7 +17,7 @@ const Tour = () => {
     return (
         <div className={'tour childrenWidth'}>
             <Helmet>
-                <title>destination</title>
+                <title>tour</title>
             </Helmet>
             <h1>information about Tour</h1>
             <div className="cont_tour">

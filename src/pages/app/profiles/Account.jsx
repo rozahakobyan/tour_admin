@@ -5,6 +5,7 @@ import Navbar from "../../../components/profile/Navbar";
 import {useDispatch, useSelector} from "react-redux";
 import {removeUserLogout, userProfileRequest} from "../../../store/action/users";
 import CustomsPortal from "../../../components/CustomsPortal";
+import {Helmet} from "react-helmet";
 
 
 const Account = () => {
@@ -30,6 +31,9 @@ const Account = () => {
 
     return (
         <div className={'account childrenWidth'}>
+            <Helmet>
+                <title>dashboard</title>
+            </Helmet>
             <Header/>
             <div className="container">
                 <Navbar/>

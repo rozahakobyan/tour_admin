@@ -7,6 +7,7 @@ import {BiEdit} from "react-icons/bi";
 import {RiDeleteBin6Line} from "react-icons/ri";
 import {useNavigate} from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import {Helmet} from "react-helmet";
 
 const AllTours = () => {
     const [page, setPage] = useState(1)
@@ -38,6 +39,9 @@ const AllTours = () => {
 
     return (
         <div className={'all_tour childrenWidth'}>
+            <Helmet>
+                <title>all tour</title>
+            </Helmet>
             <div className={'row_items'}>
                 {
                     list.tours ?
